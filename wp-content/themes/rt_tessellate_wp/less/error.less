@@ -1,0 +1,61 @@
+/**
+ * @version   1.2 February 11, 2016
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2016 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+@import "variables.less";
+@import "mixins/index.less";
+
+#rt-error-page {
+	background: @pagesurround-background;
+	#rt-header {
+		.menu-block {
+			position: relative;
+			z-index: 1000;
+		}
+	}
+	#rt-showcase {
+		.rt-flex-container {
+			.flex-flow(column nowrap);
+		}
+	}
+}
+[class*="logo-type-preset"] #rt-header-surround #rt-header {
+	margin-bottom: 0;
+}
+#rt-error-page #rt-showcase {
+	background: fadeout(@showcase-background, 50%);
+	color: @white;
+	padding: 10% 0;
+}
+.rt-error-header, .rt-error-content {
+	text-align: center;
+	margin: 25px 0;
+	padding: 15px;
+}
+
+.rt-error-code {
+	font-size: 6em;
+	line-height: 1.5em;
+}
+
+.rt-error-code-desc {
+	text-transform: uppercase;
+}
+
+.rt-error-title {
+	font-size: 2em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+}
+
+.rt-error-message {
+	font-size: 1em;
+	margin: 15px 0;
+}
+
+.rt-error-button {
+	margin: 25px 0;
+}

@@ -1,0 +1,45 @@
+# Translation of Themes - Trending Blog in English (UK)
+# This file is distributed under the same license as the Themes - Trending Blog package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-10-19 19:56:22+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Themes - Trending Blog\n"
+
+#. Description of the plugin/theme
+msgid "Trending Blog is a Clean, Minimal and Responsive child WordPress Theme of Galway Lite. It follows the trendy design with a combination of elegance. The theme was designed to be used easily of the beginner WordPress users without code knowledge. Trending Blog is fully responsive, meaning it will look great on different devices like tablets, laptops, smartphones, etc. This is the theme you have been waiting for. Live preview at https://demo.themeinwp.com/trending-blog/"
+msgstr "Trending Blog is a Clean, Minimal and Responsive child WordPress Theme of Galway Lite. It follows the trendy design with a combination of elegance. The theme was designed to be used easily of the beginner WordPress users without code knowledge. Trending Blog is fully responsive, meaning it will look great on different devices like tablets, laptops, smartphones, etc. This is the theme you have been waiting for. Live preview at https://demo.themeinwp.com/trending-blog/"
+
+#. Theme Name of the plugin/theme
+msgid "Trending Blog"
+msgstr "Trending Blog"
+
+#: header.php:137
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: header.php:39
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: functions.php:83
+msgctxt "%s font: on or off"
+msgid "on"
+msgstr "on"
+
+#. Author URI of the plugin/theme
+msgid "https://www.themeinwp.com/"
+msgstr "https://www.themeinwp.com/"
+
+#. Author of the plugin/theme
+msgid "ThemeInWP"
+msgstr "ThemeInWP"
+
+#. Theme URI of the plugin/theme
+msgid "https://themeinwp.com/theme/trending-blog"
+msgstr "https://themeinwp.com/theme/trending-blog"

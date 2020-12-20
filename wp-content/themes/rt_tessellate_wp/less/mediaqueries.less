@@ -1,0 +1,235 @@
+/**
+ * @version   1.2 February 11, 2016
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2016 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+@import "variables.less";
+
+// Large Mode
+@media only screen and (min-width: 1200px) {
+	body.layout-mode-responsive {
+		// Responsive Classes
+		.visible-large {
+			display: inherit !important;
+		}
+		.hidden-large {
+			display: none !important;
+		}
+		.visible-desktop {
+			display: inherit !important;
+		}
+		.hidden-desktop {
+			display: none !important;
+		}
+	}
+}
+
+// Desktop Modes
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	body.layout-mode-responsive {
+		// Responsive Classes
+		.visible-large {
+			display: none !important;
+		}
+		.hidden-large {
+			display: inherit !important;
+		}
+		.visible-desktop {
+			display: inherit !important;
+		}
+		.hidden-desktop {
+			display: none !important;
+		}
+
+		// Heading and Title
+		h1 {font-size: @base-font-size * 2.5; line-height: @base-line-height * 2.0;}
+		h2, .title {font-size: @base-font-size * 2.0; line-height: @base-line-height * 1.6;}
+		h3 {font-size: @base-font-size * 1.5; line-height: @base-line-height * 1.3;}
+		h4 {font-size: @base-font-size * 1.3; line-height: @base-line-height * 1.2;}
+		h5 {font-size: @base-font-size * 1.2; line-height: @base-line-height * 1.1;}
+		h6 {font-size: @base-font-size * 1.1; line-height: @base-line-height * 1.0;}
+	}
+}
+
+// Tablet Modes
+@media (min-width: 768px) and (max-width: 959px) {
+	body.layout-mode-responsive {
+		// Responsive Classes
+		.visible-tablet {
+			display: inherit !important;
+		}
+		.hidden-tablet {
+			display: none !important;
+		}
+		.hidden-desktop {
+			display: inherit !important;
+		}
+		.visible-desktop {
+			display: none !important;
+		}
+		.visible-large {
+			display: none !important;
+		}
+		.hidden-large {
+			display: inherit !important;
+		}
+
+		// Heading and Title
+		h1 {font-size: @base-font-size * 2.3; line-height: @base-line-height * 1.8;}
+		h2, .title {font-size: @base-font-size * 1.8; line-height: @base-line-height * 1.4;}
+		h3 {font-size: @base-font-size * 1.3; line-height: @base-line-height * 1.1;}
+		h4 {font-size: @base-font-size * 1.2; line-height: @base-line-height * 1.1;}
+		h5 {font-size: @base-font-size * 1.15; line-height: @base-line-height * 1.1;}
+		h6 {font-size: @base-font-size * 1.1; line-height: @base-line-height * 1.0;}
+
+		// Menu
+		.gf-menu {
+			&.l1 > li {
+				 &.parent > .item {
+				 	.menu-item-bg {
+				 		padding: 3px 10px;
+				 	}
+				 	&:after {
+				 		display: none;
+				 	}
+				 }
+			}
+		}
+	}
+}
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body.layout-mode-responsive {
+		padding: 0;
+
+		// Core
+		#rt-page-surround {
+			padding: 0;
+		}
+
+		// Responsive Classes
+		.visible-phone {
+			display: inherit !important;
+		}
+		.hidden-phone {
+			display: none !important;
+		}
+		.hidden-desktop {
+			display: inherit !important;
+		}
+		.visible-desktop {
+			display: none !important;
+		}
+		.hidden-large {
+			display: inherit !important;
+		}
+		.visible-large {
+			display: none !important;
+		}
+
+		// Typography
+		.rt-phone-center {
+			text-align: center;
+		}
+
+		// Heading and Title
+		h1 {font-size: @base-font-size * 2.0; line-height: @base-line-height * 1.8;}
+		h2, .title {font-size: @base-font-size * 1.85; line-height: @base-line-height * 1.5;}
+		h3 {font-size: @base-font-size * 1.15; line-height: @base-line-height * 1.4;}
+		h4 {font-size: @base-font-size * 1.1; line-height: @base-line-height * 1.3;}
+		h5 {font-size: @base-font-size * 1.05; line-height: @base-line-height * 1.2;}
+		h6 {font-size: @base-font-size * 1.0; line-height: @base-line-height * 1.1;}
+
+		// Logo
+		.rt-logo-block {
+			padding: 5px 0;
+		}
+		#rt-logo {
+			margin: 15px auto;
+		}
+
+		// Menu
+		.menu-block {
+			float: none;
+			margin: auto;
+			border-bottom: none;
+		}
+		.dropdown {
+			background: none !important;
+			box-shadow: none !important;
+			border: 0 !important;
+		}
+		.dropdown-spacer {
+			display: none !important;
+		}
+		.flyout {
+			margin-left: 0 !important;
+		}
+
+		// Copyright
+		#rt-copyright {
+			text-align: center;
+		}
+
+		// Joomla Core
+		.component-content {
+			.column-1, .column-2, .column-3, .column-4 {
+				width: 100% !important;
+				float: none !important;
+				margin: 0 !important;
+			}
+		}
+
+		// Branding
+		.rt-powered-by {
+			margin: 0 auto;
+		}
+
+		// Extras
+		.gantry-width-20, .gantry-width-25, .gantry-width-30, .gantry-width-33, .gantry-width-40, .gantry-width-50, .gantry-width-60, .gantry-width-66, .gantry-width-70, .gantry-width-75, .gantry-width-80 {
+			width: 100%;
+		}
+		.gantry-width-spacer {
+			margin: 0 5px;
+		}
+
+		.row {
+			margin: 0;
+			display: block;
+
+			.cell {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.form-horizontal {
+			.control-group {
+				.control-label {
+					float:none;
+					width: auto;
+					text-align:left;
+				}
+				.controls {
+					margin-left: 0;
+				}
+			}
+		}
+		select {
+			width: 100%;
+		}
+	}
+}
+
+// Small Screen Mobile Modes
+@media only screen and (max-width: 480px) {
+	body.layout-mode-responsive {
+		// Core
+		.rt-container {
+			width: 100%;
+		}
+	}
+}

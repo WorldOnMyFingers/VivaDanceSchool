@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<wpml-config>
+    <custom-fields>
+        <custom-field action="translate">iw_teacher_rate</custom-field>
+        <custom-field action="translate">iw_teacher_email</custom-field>
+        <custom-field action="translate">iw_teacher_image_gallery</custom-field>
+        <custom-field action="translate">iw_teacher_basic_info</custom-field>
+        <custom-field action="translate">iw_teacher_training_experience</custom-field>
+        <custom-field action="translate">iw_teacher_training_skills</custom-field>
+        <custom-field action="translate">iw_teacher_social_link</custom-field>
+        <custom-field action="translate">iw_courses_image_gallery</custom-field>
+        <custom-field action="translate">iw_courses_related_couses</custom-field>
+        <custom-field action="translate">iw_courses_teacher</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">iw_courses</custom-type>
+        <custom-type translate="1">iw_teacher</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">iw_courses_class</taxonomy>
+    </taxonomies>
+</wpml-config>

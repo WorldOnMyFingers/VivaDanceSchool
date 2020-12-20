@@ -1,0 +1,592 @@
+/**
+ * @version   1.2 February 11, 2016
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2016 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+@import "variables.less";
+@import "mainbody-@{mainbody-overlay}.less";
+@import "/jui/less/mixins.less";
+@import "mixins/index.less";
+
+// RokSprocket Arrow & Pagination
+.sprocket-lists {
+	.arrow {
+		border-radius: 2px;
+	}
+	.sprocket-lists-pagination li {
+		border: 2px solid @black;
+		background: transparent;
+	}
+}
+.sprocket-strips {
+	.arrow {
+		&.prev {
+			border-radius: 2px 0 0 2px;
+		}
+		&.next {
+			border-radius: 0 2px 2px 0;
+		}
+	}
+	.sprocket-lists-pagination li {
+		border: 2px solid @black;
+		background: transparent;
+	}
+}
+
+// RokSprocket Tabs
+.sprocket-tabs {
+	.sprocket-tabs-nav {
+		.flex-display(flex);
+		.flex-flow(row wrap);
+		li {
+			.flex(1);
+			min-width: 0;
+		}
+	}
+	.sprocket-tabs-nav li .sprocket-tabs-inner {
+		.textColor(@accent-color3);
+		background: rgba(0, 0, 0, 0.1);
+		font-family: @alt-font-family;
+		text-align: center;
+		padding: 15px 20px;
+		opacity: 1;
+	}
+	&.layout-top {
+		.sprocket-tabs-nav li .sprocket-tabs-inner {
+			.transform(skew(25deg, 0deg));
+			.sprocket-tabs-text {
+				display: block;
+				.transform(skew(-25deg, 0deg));
+			}
+		}
+	}
+	.sprocket-tabs-nav > li {
+		&:hover > .sprocket-tabs-inner {
+			background: fadeout(@accent-color1, 50%);
+		}
+		&.active > .sprocket-tabs-inner,
+		&.active:hover > .sprocket-tabs-inner {
+			.textColor(@accent-color1);
+			background: @accent-color1;
+		}
+	}
+	.sprocket-tabs-panels {
+		color: rgba(0, 0, 0, 0.8);
+		border: 0;
+		padding: 10px 25px;
+	}
+	&.layout-top .sprocket-tabs-nav li, &.layout-bottom .sprocket-tabs-nav li {
+		margin: 0;
+	}
+	&.layout-top {
+		.sprocket-tabs-panels {
+			margin-top: 0;
+		}
+	}
+}
+
+// RokSprocket Lists
+.sprocket-lists {
+	.sprocket-lists-container {
+		.sprocket-lists-title .indicator:before {
+			.buttonStyleFlat(@white,darken(@accent-color1, 10%), 3px);
+			font-size: 1em;
+		}
+	}
+	.sprocket-lists-title {
+		color: @black;
+	}
+	.sprocket-lists-item .sprocket-padding {
+		.flex-display(flex);
+	}
+	.sprocket-lists-nav {
+		.flex-display(flex);
+		.sprocket-lists-pagination, .spinner, .sprocket-lists-arrows {
+			min-width: 0;
+			.flex(1);
+		}
+	}
+	.sprocket-lists-infos {
+		font-family: @alt-font-family;
+		font-size: 80%;
+		font-weight: normal;
+	}
+}
+
+// RokSprocket Mosaic
+.sprocket-mosaic {
+	.sprocket-mosaic-filter li, .sprocket-mosaic-order li {
+		color: @dark-grey;
+		background: @light-grey;
+		padding: 5px 20px;
+		border-radius: 3px;
+		&.active, &:hover {
+			color: @white;
+			background: darken(@light-grey, 25%);
+		}
+	}
+	.sprocket-mosaic-tags li {
+		border-radius: 3px;
+	}
+	.sprocket-mosaic-image {
+		border-radius: 3px;
+	}
+	.sprocket-mosaic-title {
+		font-size: 1.2em;
+		a {
+			text-decoration: none;
+		}
+	}
+	.sprocket-mosaic-loadmore {
+		.textColor(@accent-color1);
+		background: @accent-color1;
+		border-radius: 3px;
+		.transition(background 0.2s ease-in);
+		&:hover, &.loader {
+			color: @white;
+			background: @accent-color2;
+		}
+	}
+}
+
+// RokSprocket Strips
+.sprocket-strips {
+	.cols-1 > li {.flex-basis(100%);min-width: 0;}
+	.cols-2 > li {.flex-basis(50%);min-width: 0;}
+	.cols-3 > li {.flex-basis(33.333333%);min-width: 0;}
+	.cols-4 > li {.flex-basis(25%);min-width: 0;}
+	.cols-5 > li {.flex-basis(20%);min-width: 0;}
+	.cols-6 > li {.flex-basis(16.666667%);min-width: 0;}
+	.cols-7 > li {.flex-basis(14.255555%);min-width: 0;}
+	.cols-8 > li {.flex-basis(12.5%);min-width: 0;}
+	.cols-9 > li {.flex-basis(11.111111%);min-width: 0;}
+	.cols-10 > li {.flex-basis(11%);min-width: 0;}
+	.cols-11 > li {.flex-basis(9.090909%);min-width: 0;}
+	.cols-12 > li {.flex-basis(8.333333%);min-width: 0;}
+	.sprocket-strips-container {
+		.flex-display(flex);
+		.flex-flow(row wrap);
+	    @media (max-width: 767px) {
+			body.layout-mode-responsive & {
+				display: block;
+				.flex-flow(column nowrap);
+			}
+		}
+	}
+	.sprocket-strips-title {
+		position: relative;
+	    @media only screen and (min-width: 960px) and (max-width: 1199px) {
+			body.layout-mode-responsive & {
+			    font-size: 0.95em;
+			    line-height: 1.65em;
+			}
+		}
+	}
+	.sprocket-strips-item {
+	    @media only screen and (min-width: 960px) and (max-width: 1199px) {
+			body.layout-mode-responsive & {
+			    line-height: 1.5em;
+			}
+		}
+	}
+	.sprocket-strips-text {
+	    @media only screen and (min-width: 960px) and (max-width: 1199px) {
+			body.layout-mode-responsive & {
+			    font-size: 0.9em;
+			}
+		}
+	}
+	.rt-strips-tag {
+		position: absolute;
+		top: -100%;
+		font-weight: normal;
+		font-size: 0.5em;
+		line-height: 1;
+		text-transform: uppercase;
+		display: block;
+		margin-top: -25px;
+		padding: 5px;
+		border-radius: 3px;
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.sprocket-strips-content {
+	    @media (max-width: 959px) {
+			body.layout-mode-responsive & {
+				display: none;
+			}
+		}
+	}
+}
+
+// RokAjaxSearch
+#roksearch_search_str {
+	width: 100%;
+}
+#roksearch_results {
+	color: @body-text;
+	background: darken(@body-background, 3%);
+	border: 1px solid darken(@body-background, 10%);
+	.box-sizing(border-box);
+	.roksearch_result_wrapper1 {
+		#gradient > .vertical(@body-background, darken(@body-background, 3%));
+		color: @body-text;
+		&:hover {
+			#gradient > .vertical(lighten(@accent-color1, 35%), lighten(@accent-color1, 25%));
+			color: darken(@accent-color1, 25%);
+			border-color: darken(@accent-color1, 8%);
+		}
+	}
+	span.highlight {
+		color: @white;
+		background-color: darken(@accent-color1, 20%);
+		text-shadow: none;
+	}
+    @media (max-width: 767px) {
+		body.layout-mode-responsive & {
+			width: 90%;
+		}
+	}
+}
+#rokajaxsearch {
+	margin: 0;
+	> .rokajaxsearch {
+		background: none;
+		box-shadow: none;
+		border: none;
+	}
+}
+.rokajaxsearch {
+	.search_options {
+		margin-top: 8px;
+		padding-bottom: 15px;
+		label {
+			margin-right: 10px !important;
+			input[type="radio"], input[type="checkbox"] {
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+	.clr {
+		clear: both;
+	}
+	.searchintro {
+		overflow: hidden;
+	}
+}
+#roksearch_results {
+	z-index: 10000;
+	position: absolute;
+	width: 400px;
+	float: right;
+	text-align: left;
+	visibility: hidden;
+	margin-top: 5px;
+	.small {
+		display: inline;
+		position: relative;
+		text-align: inherit;
+		bottom: 0;
+		right: 0;
+		font-size: 11px;
+		font-style: italic;
+	}
+	a.clr {
+		margin: 10px 0 5px 0;
+	}
+	h3 {
+		margin-top: 0;
+		margin-bottom: 2px;
+		line-height: 110%;
+		font-size: 110%;
+		padding-bottom: 0;
+	}
+	.container-wrapper {
+		overflow: hidden;
+	}
+	.page {
+		float: left;
+	}
+	.roksearch_header, .roksearch_row_btm {
+		padding: 10px 15px;
+		line-height: 130%;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	.roksearch_row_btm {
+		overflow: hidden;
+		border-top: 1px solid darken(@body-background, 12%);
+	}
+	.roksearch_even, .roksearch_odd {
+		padding: 15px;
+		border-bottom: none;
+		span {
+			margin-top: 15px;
+			line-height: 140%;
+			&.highlight {
+				margin-top: 0;
+				padding: 0 3px;
+			}
+		}
+	}
+	.viewall {
+		float: left;
+		margin: 0 5px;
+		span {
+			line-height: 130%;
+			text-transform: none;
+		}
+	}
+	.estimated_res {
+		font-size: 9px;
+		font-style: italic;
+		text-transform: none;
+		float:left;
+	}
+	.pagination_res {
+		font-style: normal;
+		float: right;
+		text-transform: none;
+		font-size: 11px;
+		span {
+			padding: 0 5px;
+		}
+	}
+	.powered-by-google {
+		text-transform: lowercase;
+		font-style: italic;
+		font-size: 9px;
+	}
+	.google-search {
+		#roksearch_link {
+			margin-top: 5px;
+		}
+	}
+	.google-thumb-image {
+		margin: 0 auto;
+	}
+	.readon {
+		margin-top: 15px;
+		span, .button {
+			font-size: 13px;
+			line-height: 22px;
+		}
+	}
+	.container-arrows {
+		height: 12px;
+		width: 30px;
+		float: left;
+		margin-right: 5px;
+		position: relative;
+	}
+	#roksearch_link:before{
+		content: "×";
+	    font-size: 1.5em;
+	    position: absolute;
+	    right: 10px;
+	    top: 8px;
+	    z-index: 100;
+	}
+	.arrow-left, .arrow-left-disabled, .arrow-right, .arrow-right-disabled {
+		position: absolute;
+		&:before {
+			font-family: FontAwesome;
+			font-size: 1.3em;
+		}
+	}
+	.arrow-left, .arrow-right {
+		cursor: pointer;
+		&:before {
+			color: @accent-color1;
+		}
+	}
+	.arrow-left, .arrow-left-disabled {
+		left: 0;
+		&:before {
+			content: '\f104';
+		}
+	}
+	.arrow-right, .arrow-right-disabled {
+		left: 18px;
+		&:before {
+			content: '\f105';
+		}
+	}
+}
+
+// RokBox
+.rokbox-wrapper .rokbox-outer .rokbox-row .rokbox-inner .rokbox-container .rokbox-content {
+	.textColor(@white);
+	background: @white;
+}
+
+// RokGallery
+.rg-sc {
+	.rg-scr-info {
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.layout-left .rg-scr-info {
+		left: 0;
+	}
+	.layout-right .rg-scr-info {
+		right: 0;
+	}
+	.rg-scr-content {
+		position: absolute;
+		top: 0;
+		vertical-align: top;
+		padding: 0 !important;
+	}
+	.rg-scr-title-span {
+		margin: 0 0 15px 0;
+	}
+	.rg-scr-desc-surround {
+		clear: both;
+	}
+	.rg-scr-controls .prev {
+		left: 0;
+	}
+	.rg-scr-controls .next {
+		right: 0;
+	}
+	.rg-ss-title {
+		line-height: 180%;
+	}
+	.rg-ss-caption {
+		text-indent: 0;
+		line-height: 180%;
+	}
+}
+.rg-sc-slide {
+	.rg-sc-title-span {
+		margin: 0 0 15px 0;
+	}
+	.rg-sc-desc-surround {
+		clear: both;
+	}
+}
+.rg-ss-controls.onhover {
+	visibility: hidden;
+}
+.rg-ss-slice-container:hover {
+	.rg-ss-controls.onhover {
+		visibility: visible;
+	}
+}
+.rg-ss-container {
+	.arrows-enabled .rg-ss-thumb-scroller {
+		margin: 0 10px;
+	}
+	.rg-ss-title {
+		margin-bottom: 25px;
+	}
+	.rg-ss-caption {
+		text-indent: 0;
+	}
+}
+
+
+// Tablet Modes
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body.layout-mode-responsive {
+		// RokSprocket Mosaic
+		.sprocket-mosaic-columns-1 > li,
+		.sprocket-mosaic-columns-5 > li,
+		.sprocket-mosaic-columns-7 > li,
+		.sprocket-mosaic-columns-11 > li {
+			width: 100% !important;
+		}
+		.sprocket-mosaic-columns-2 > li,
+		.sprocket-mosaic-columns-1 >0 li {
+			width: 50% !important;
+		}
+		.sprocket-mosaic-columns-4 > li,
+		.sprocket-mosaic-columns-8 > li,
+		.sprocket-mosaic-columns-12 > li {
+			width: 25% !important;
+		}
+		.sprocket-mosaic-columns-3 > li,
+		.sprocket-mosaic-columns-6 > li,
+		.sprocket-mosaic-columns-9 > li {
+			width: 33.33% !important;
+		}
+
+		// RokSprocket Strips
+		.sprocket-strips-container.cols-1 li,
+		.sprocket-strips-container.cols-5 li,
+		.sprocket-strips-container.cols-7 li,
+		.sprocket-strips-container.cols-11 li {
+			width: 100% !important;
+		}
+		.sprocket-strips-container.cols-2 li,
+		.sprocket-strips-container.cols-10 li {
+			width: 48% !important;
+		}
+		.sprocket-strips-container.cols-4 li,
+		.sprocket-strips-container.cols-8 li,
+		.sprocket-strips-container.cols-12 li {
+			width: 23% !important;
+		}
+		.sprocket-strips-container.cols-3 li,
+		.sprocket-strips-container.cols-6 li,
+		.sprocket-strips-container.cols-9 li {
+			width: 31.33% !important;
+		}
+	}
+}
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body.layout-mode-responsive {
+		// RokSprocket Mosaic
+		.sprocket-mosaic-columns-1 > li, .sprocket-mosaic-columns-2 > li, .sprocket-mosaic-columns-3 > li, .sprocket-mosaic-columns-4 > li, .sprocket-mosaic-columns-5 > li, .sprocket-mosaic-columns-6 > li {
+			width: 100% !important;
+		}
+		.sprocket-mosaic .sprocket-mosaic-header .sprocket-mosaic-filter, .sprocket-mosaic .sprocket-mosaic-header .sprocket-mosaic-order {
+			float: none;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		// RokSprocket Strips
+		.sprocket-strips-container.cols-1 li, .sprocket-strips-container.cols-2 li, .sprocket-strips-container.cols-3 li, .sprocket-strips-container.cols-4 li, .sprocket-strips-container.cols-5 li, .sprocket-strips-container.cols-6 li, .sprocket-strips-container.cols-7 li, .sprocket-strips-container.cols-8 li, .sprocket-strips-container.cols-9 li {
+			width: 100%;
+		}
+	}
+}
+
+// Small Screen Mobile Modes
+@media only screen and (max-width: 480px) {
+	body.layout-mode-responsive {
+		[class*="sprocket"] .sprocket-mosaic-filter li, [class*="sprocket"] .sprocket-mosaic-order li {
+			font-size: 0.8em;
+			padding: 0 5px;
+		}
+	}
+}
+
+
+// RokSprocket Strips Arrow
+@media
+only screen and (min-width: 1195px) and (max-width: 1275px),
+only screen and (min-width: 960px) and (max-width: 1070px),
+only screen and (min-width: 768px) and (max-width: 880px),
+only screen and (min-width: 482px) and (max-width: 600px),
+only screen and (max-width: 480px) {
+	body.layout-mode-responsive {
+		.sprocket-strips {
+			.sprocket-strips-arrows .arrow {
+				&.prev {
+					left: -10px;
+				}
+				&.next {
+					right: -10px;
+				}
+			}
+		}
+	}
+}
